@@ -172,6 +172,8 @@ export function DataTable<TData, TValue>({
         : {}),
     },
     manualPagination,
+    // Preserve the current page when a mutation refreshes the table data.
+    autoResetPageIndex: false,
     pageCount: manualPagination ? (pageCount ?? -1) : undefined,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
